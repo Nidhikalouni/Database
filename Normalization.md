@@ -110,6 +110,7 @@ CREATE TABLE books_2nf (
     author VARCHAR(100),
     price DECIMAL(10, 2)
 );
+```
 ```sql
 CREATE TABLE order_items_2nf (
     order_id INT,
