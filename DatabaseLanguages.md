@@ -60,7 +60,9 @@ TCL	Manage transactions	COMMIT, ROLLBACK, SAVEPOINT
 - Can be rolled back (transaction safe).
 
 Example:
-```sql DELETE FROM Students WHERE id = 5;```
+```sql 
+DELETE FROM Students WHERE id = 5;
+```
 
 #### 2. TRUNCATE
 - Removes all rows from a table.
@@ -71,7 +73,9 @@ Example:
 - Cannot be rolled back in some DBMS (DDL operation).
 
 Example:
-```sql TRUNCATE TABLE Students;```
+```sql
+TRUNCATE TABLE Students;
+```
 
 #### 3. DROP
 - Deletes the entire table from the database.
@@ -80,4 +84,6 @@ Example:
 - After DROP, the table no longer exists.
 
 Example:
-```sql DROP TABLE Students;```
+```sql
+DROP TABLE Students;
+```
