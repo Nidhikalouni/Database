@@ -217,3 +217,25 @@ FROM order_items_3nf
 JOIN books_3nf ON order_items_3nf.book_isbn = books_3nf.isbn;
 ```
 ## BCNF(Normal Form)
+A table is in BCNF if:
+- It is already in 3NF, AND
+- For every functional dependency (X → Y), X must be a superkey. (or every determinant is a super key)
+- BCNF is a stronger version of 3NF.
+- 🎯 Why BCNF is needed?
+Because 3NF allows one special case of dependency:
+A non-prime attribute can depend on a prime attribute,
+even if that prime attribute is part of a composite key.
+BCNF disallows this — BCNF is more strict.
+## 4NF(Normal Form)
+A table is in 4NF if:
+- It is already in BCNF, AND
+- It has no multi-valued dependencies (MVDs).
+A Multi-Valued Dependency occurs when:
+One attribute in a table determines multiple independent values of another attribute.
+## 5NF ( Project-Join Normal Form (PJNF))
+A table is in 5NF if:
+- It is already in 4NF, AND
+- It has no join dependencies that cannot be expressed using candidate keys.
+In simple words:
+5NF ensures a table cannot be split into smaller tables without losing data or creating wrong combinations.
+All decompositions must be lossless.
