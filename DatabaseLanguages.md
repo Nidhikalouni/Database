@@ -50,3 +50,34 @@ DQL	Query data	SELECT
 DCL	Control access	GRANT, REVOKE
 
 TCL	Manage transactions	COMMIT, ROLLBACK, SAVEPOINT
+
+### ✅ DELETE vs TRUNCATE vs DROP
+##### 1. DELETE
+- Removes rows (records) from a table.
+- You can delete specific rows using WHERE.
+- Table structure remains.
+- Slow because it logs each deleted row.
+- Can be rolled back (transaction safe).
+
+Example:
+```sql DELETE FROM Students WHERE id = 5;```
+
+#### 2. TRUNCATE
+- Removes all rows from a table.
+- You cannot delete specific rows.
+- Faster than DELETE (minimal logging).
+- No WHERE clause.
+- Table structure remains, only data deleted.
+- Cannot be rolled back in some DBMS (DDL operation).
+
+Example:
+```sql TRUNCATE TABLE Students;```
+
+#### 3. DROP
+- Deletes the entire table from the database.
+- Removes data + structure + indexes + constraints.
+- Very dangerous — cannot be rolled back easily.
+- After DROP, the table no longer exists.
+
+Example:
+```sql DROP TABLE Students;```
