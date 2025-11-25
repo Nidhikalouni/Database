@@ -40,8 +40,13 @@ Common TCL Commands Command	Description
 - SET TRANSACTION	Set transaction properties
 ## Summary Table
 Category	Purpose	Commands
+
 DDL	Define structure	CREATE, ALTER, DROP, TRUNCATE
+
 DML	Manipulate data	INSERT, UPDATE, DELETE
+
 DQL	Query data	SELECT
+
 DCL	Control access	GRANT, REVOKE
+
 TCL	Manage transactions	COMMIT, ROLLBACK, SAVEPOINT
