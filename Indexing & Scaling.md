@@ -98,3 +98,15 @@ It does not change the physical order of the table data.
 Leaf nodes store:
 - ❌ NOT actual data rows
 - ✔ Only key + pointer to data row/page
+
+  <img width="1239" height="736" alt="image" src="https://github.com/user-attachments/assets/885abcf5-607a-4b52-a9c3-0284ea69e92d" />
+
+
+<img width="1180" height="684" alt="image" src="https://github.com/user-attachments/assets/8886bf9d-48c5-4bec-84a5-8bb7cac27385" />
+
+
+
+## CLUSTERED VS NON-CLUSTERED INDEX
+
+<img width="1092" height="615" alt="image" src="https://github.com/user-attachments/assets/84ce1cca-4aa7-4801-b339-900039dfac8b" />
+
