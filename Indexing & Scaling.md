@@ -110,3 +110,58 @@ Leaf nodes store:
 
 <img width="1092" height="615" alt="image" src="https://github.com/user-attachments/assets/84ce1cca-4aa7-4801-b339-900039dfac8b" />
 
+
+### PRIMARY INDEXING
+#### 1. Definition
+A primary index is an index created on the primary key of a table. It stores the key values in sorted order along with a pointer to the corresponding record in the data file.
+- It improves the speed of retrieval based on the primary key.
+- Usually implemented using a B+ Tree for efficient search.
+
+####  2. Key Features
+- Based on primary key
+- Each value in the primary key is unique.
+- Sorted order
+- Index entries are stored in ascending order of the primary key.
+
+### Sparse vs Dense Index
+- Sparse Primary Index: Only one index entry per block of records.
+- Dense Primary Index: One index entry for every record.
+
+
+  # SCALING IN DATABASE
+
+  #### 1. What is Database Scaling?
+- Scaling is the process of improving a database’s capacity to handle more data, more users, or higher request loads efficiently.
+- Databases can become bottlenecks when traffic increases, so scaling ensures performance, availability, and reliability.
+
+###### 2. Types of Scaling
+There are two main approaches:
+###### A. Vertical Scaling (Scale-Up)
+- Definition: Increase the resources of a single database server.
+- How: Upgrade CPU, RAM, storage, or network capacity.
+###### Pros:
+- Simple to implement.
+- No changes needed in application logic.
+- Works well for read-heavy and smaller datasets.
+
+###### Cons:
+- Limited by hardware maximums.
+- Can be expensive.
+- Single point of failure remains.
+- Example:
+Moving from a 4-core, 16GB RAM server to 16-core, 128GB RAM.
+
+###### B. Horizontal Scaling (Scale-Out)
+
+- Definition: Add more servers to share the load.
+- How: Use replication, sharding, or distributed databases.
+
+###### Pros:
+- Almost unlimited growth.
+- Better fault tolerance (if one node fails, others continue).
+###### Cons:
+- Complex to implement.
+- Needs data partitioning or sharding.
+- Application may require changes to handle multiple nodes.
+- Example:
+Distributing user data across 3 database servers instead of 1.
