@@ -49,6 +49,8 @@ Both use B+ Tree internally, but they work differently.
 
 #### CLUSTERED INDEXING
 <img width="1533" height="815" alt="image" src="https://github.com/user-attachments/assets/20281641-f508-49d3-ba26-577f0fd62aab" />
+
+
 A clustered index is an index in which the actual table data is physically stored in the same order as the index key.
 - Only ONE clustered index is allowed per table
 - Because the table data itself is arranged according to the clustered key
