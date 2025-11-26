@@ -165,3 +165,22 @@ Moving from a 4-core, 16GB RAM server to 16-core, 128GB RAM.
 - Application may require changes to handle multiple nodes.
 - Example:
 Distributing user data across 3 database servers instead of 1.
+
+
+## 1. What is Sharding?
+- Sharding is a method of splitting a large database into smaller, more manageable pieces, called shards, each stored on a separate database server.
+- Each shard contains a subset of the data, usually based on a sharding key (e.g., user_id, region).
+- All shards together represent the complete dataset.
+- ✅ Purpose: To distribute load, improve performance, and handle large datasets.
+
+### 2. Why Sharding is Needed
+- When a single database server cannot handle:
+- High read/write traffic.
+- Large data volume.
+- Low-latency response for global users.
+- Sharding allows horizontal scaling (adding more servers instead of upgrading a single server).
+  
+### 3. How Sharding Works
+- Pick a sharding key that evenly distributes data.
+- Split the data based on the key.
+- Store each shard on a different server.
