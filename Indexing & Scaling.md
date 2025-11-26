@@ -47,3 +47,41 @@ Indexes in a database are mainly of two types:
 - Non-Clustered Index
 Both use B+ Tree internally, but they work differently.
 #### CLUSTERED INDEXING
+<img width="1533" height="815" alt="image" src="https://github.com/user-attachments/assets/20281641-f508-49d3-ba26-577f0fd62aab" />
+A clustered index is an index in which the actual table data is physically stored in the same order as the index key.
+- Only ONE clustered index is allowed per table
+- Because the table data itself is arranged according to the clustered key
+- The leaf nodes of the B+ Tree contain the actual data pages
+###### 📌 Why is it called “Clustered”?
+Because data rows are clustered (arranged) according to the index key.
+#### ✅ Clustered Index B+Tree Structure 
+#### 📌 1. Root Node
+- Stores: Keys + pointers to intermediate nodes
+- Purpose:
+Helps DBMS quickly navigate down the tree toward the correct key range.
+#### 📌 2. Intermediate (Internal) Nodes
+- Stores: Keys + pointers to leaf nodes
+- Purpose:
+Acts like a routing map — narrows the search path.
+#### 📌 3. Leaf Nodes 
+- Stores: Actual table data rows
+- Purpose:
+In a clustered index, the leaf nodes are the data pages themselves.
+This means:
+- ✔ The table is physically sorted by the clustered index key
+- ✔ Leaf nodes contain full rows (all columns)
+- ✔ No separate heap storage exists for table data
+#### NON-CLUSTERED INDEXING  
+A non-clustered index is a separate indexing structure in the database that stores the indexed column values in sorted order, along with pointers that point to the actual data rows stored in the table.
+It does not change the physical order of the table data.
+### 🧠 Non-Clustered Index B+ Tree Structure
+#### 📌 Root Node
+- Stores: Keys + pointers to intermediate nodes
+- Purpose: Navigate to correct branch
+#### 📌 Intermediate Nodes
+- Stores: Keys + pointers to leaf nodes
+- Purpose: Routing levels just like clustered index
+ #### 📌 Leaf Nodes (MOST IMPORTANT DIFFERENCE)
+Leaf nodes store:
+- ❌ NOT actual data rows
+- ✔ Only key + pointer to data row/page
