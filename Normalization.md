@@ -232,6 +232,10 @@ A table is in 4NF if:
 - It has no multi-valued dependencies (MVDs).
 A Multi-Valued Dependency occurs when:
 One attribute in a table determines multiple independent values of another attribute.
+-🔍 Multi-Valued Dependency (MVD) means:
+
+One attribute of a table can have multiple independent values, and
+another attribute also has multiple independent values — and they do NOT depend on each other.
 ## 5NF ( Project-Join Normal Form (PJNF))
 A table is in 5NF if:
 - It is already in 4NF, AND
