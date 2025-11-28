@@ -166,6 +166,36 @@ Moving from a 4-core, 16GB RAM server to 16-core, 128GB RAM.
 - Example:
 Distributing user data across 3 database servers instead of 1.
 
+## Partitioning in Database
+### What is Partitioning?
+Partitioning means splitting a large table or index into smaller, manageable pieces called partitions, while still treating them as a single logical table.
+📌 The table remains logically one, but physically stored in multiple parts.
+
+#### Why Partitioning? (Benefits)
+- Improves Query Performance
+- Queries scan only relevant partitions (Partition Pruning).
+- Faster Read & Write
+- Less data per partition → quicker operations.
+- Easy Maintenance
+- Backups, deletes, purging can be done partition-wise.
+- Better Resource Utilization
+- Load is spread across disks/servers.
+- Scales large datasets
+- Useful in systems with millions–billions of rows.
+
+### ✅ 1. Row-wise Partitioning (Horizontal Partitioning)
+👉 Data is split based on rows.
+#### Meaning: You divide a table into multiple tables having same columns but different rows.
+###### Example:
+A Users table is partitioned by region:
+- Partition 1 → Users from India
+- Partition 2 → Users from USA
+- Partition 3 → Users from UK
+
+### ✅ 2. Column-wise Partitioning (Vertical Partitioning)
+👉 Data is split based on columns.
+Meaning: You divide a table into multiple tables having same rows but different columns.
+
 
 ## 1. What is Sharding?
 - Sharding is a method of splitting a large database into smaller, more manageable pieces, called shards, each stored on a separate database server.
