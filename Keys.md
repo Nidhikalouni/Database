@@ -78,10 +78,8 @@ Choose one candidate key as the main key.
 Use two or more columns together to uniquely identify a row.
 Example table: CourseRegistration
 
-student_id	course_id
-101	          501
-101	          502
-102	          501
+<img width="794" height="234" alt="image" src="https://github.com/user-attachments/assets/e02c8c02-45e4-4d6a-9b85-dfec354c379d" />
+
 
 Here:
 - student_id alone is NOT unique
@@ -92,15 +90,8 @@ But together they are unique
 
 ## 5️⃣ Foreign Key Example
 
-Table: Students
-roll_no  	name
-101	      Nidhi
-102	      Arjun
+<img width="1069" height="444" alt="image" src="https://github.com/user-attachments/assets/254ef80f-bc18-412b-b762-0e35fe6db831" />
 
-Table: Marks
-mark_id  	roll_no	  subject  	marks
-1	        101	      DBMS	    90
-2       	102     	Java	    88
 
 Here:
 - Students.roll_no is Primary Key
