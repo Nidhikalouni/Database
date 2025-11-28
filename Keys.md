@@ -105,4 +105,9 @@ Key Type	Example
 - Primary Key	{roll_no}
 - Composite Key	{student_id, course_id}
 - Foreign Key	Marks.roll_no → Students.roll_no
-  
+
+
+ # UNIQUE KEY
+ 
+ <img width="1227" height="575" alt="image" src="https://github.com/user-attachments/assets/2096b579-c1b4-4ff1-8cf6-43d58397de78" />
+
